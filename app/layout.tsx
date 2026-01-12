@@ -4,6 +4,8 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import CookieModal from "./components/CookieModal";
 import Footer from "./components/Footer";
+// 1. Importaj SolanaProvider
+import SolanaProvider from "./components/SolanaProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,7 +16,6 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
 
 export const metadata: Metadata = {
   title: 'Game of Sol | The Legacy of Solana Immortalized',
@@ -54,10 +55,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar />
-        {children}
-        <Footer />
-      <CookieModal />
+        {/* 2. Omotaj sve s SolanaProvider-om */}
+        <SolanaProvider>
+          <Navbar />
+          {children}
+          <Footer />
+          <CookieModal />
+        </SolanaProvider>
       </body>
     </html>
   );

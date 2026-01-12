@@ -1,12 +1,16 @@
-// models/User.ts
 import { Schema, model, models, Types } from "mongoose";
 
 export interface IUser {
   walletAddress: string;
   username: string;
   avatarUrl?: string;
+  
+  // DODANO: Razlikovanje između bodova i valute
+  currency: number; 
+  level: number;
+  xp: number;
 
-  ownedCards: Types.ObjectId[]; // reference na Card._id
+  ownedCards: Types.ObjectId[];
 
   pointsDaily: number;
   pointsWeekly: number;
@@ -19,6 +23,9 @@ export interface IUser {
 
   loginStreak: number;
   lastLoginAt?: Date;
+  
+  // DODANO: Role sustav (ako ćeš imati admin panel za dodavanje kartica)
+  role: "player" | "admin";
 }
 
 const UserSchema = new Schema<IUser>(
@@ -28,11 +35,23 @@ const UserSchema = new Schema<IUser>(
       required: true,
       unique: true,
       lowercase: true,
+      trim: true, // DODANO: miče prazna mjesta ako se slučajno pojave
       index: true,
     },
 
-    username: { type: String, required: true },
-    avatarUrl: String,
+    username: { 
+        type: String, 
+        required: true,
+        trim: true,
+        minLength: [3, "Username must be at least 3 characters"] 
+    },
+    
+    avatarUrl: { type: String, default: "" },
+
+    // DODANO: Početne vrijednosti za progresiju
+    currency: { type: Number, default: 0 },
+    level: { type: Number, default: 1 },
+    xp: { type: Number, default: 0 },
 
     ownedCards: [
       {
@@ -53,9 +72,15 @@ const UserSchema = new Schema<IUser>(
     ],
 
     loginStreak: { type: Number, default: 0 },
-    lastLoginAt: Date,
+    lastLoginAt: { type: Date },
+    
+    // DODANO: Default role
+    role: { type: String, enum: ["player", "admin"], default: "player" }
   },
   { timestamps: true }
 );
+
+// DODANO: Middleware za automatski reset streak-a ili level up logiku (opcionalno)
+// Ovdje možeš dodati funkcije koje se izvršavaju prije spremanja (pre-save)
 
 export default models.User || model<IUser>("User", UserSchema);
