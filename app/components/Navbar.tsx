@@ -35,7 +35,7 @@ export default function Navbar() {
     <>
       {/* HEADER / NAVIGATION */}
       <nav className="border-b-4 border-[#913f8d] bg-[#121217] p-4 sticky top-0 z-50">
-        <div className="max-w-6xl mx-auto flex justify-between items-center">
+        <div className="max-w-6xl mx-auto flex justify-between items-start md:items-center">
           <div className="flex items-center gap-2">
             <Link href="/" className="flex items-center gap-4">
               <Image
@@ -55,12 +55,20 @@ export default function Navbar() {
           <div className="flex gap-4">
             {connected ? (
           // Gumb koji se vidi kad je Wallet SPOJEN
-          <button 
-            onClick={() => disconnect()}
-            className="bg-[#2a2a32] border-b-4 border-black px-4 py-2 text-xs uppercase font-black active:border-b-0 active:translate-y-1 text-neutral-400 cursor-pointer hover:bg-[#32323a] transition"
-          >
-            {publicKey?.toBase58().slice(0, 4)}...{publicKey?.toBase58().slice(-4)} (Disconnect)
-          </button>
+          <div className="flex flex-col md:flex-row items-end md:items-center gap-4">
+            <Link 
+              href="/dashboard"
+              className="bg-[#913f8d] border-b-4 border-black px-4 py-2 text-xs uppercase font-black active:border-b-0 active:translate-y-1 text-neutral-50 cursor-pointer hover:bg-[#913f8d]/80 transition"
+            >
+              Dashboard
+            </Link>
+            <button 
+              onClick={() => disconnect()}
+              className="bg-[#2a2a32] border-b-4 border-black px-4 py-2 text-xs uppercase font-black active:border-b-0 active:translate-y-1 text-neutral-400 cursor-pointer hover:bg-[#32323a] transition"
+            >
+              {publicKey?.toBase58().slice(0, 4)}...{publicKey?.toBase58().slice(-4)} (Disconnect)
+            </button>
+          </div>
         ) : (
           // Tvoj originalni dizajn gumba koji otvara Wallet Modal
           <button 
