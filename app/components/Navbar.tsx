@@ -59,17 +59,17 @@ export default function Navbar() {
             </div>
           ) : connected && publicKey ? (
             <div className="flex items-center gap-3">
-              <Link href="/dashboard" className="bg-[#913f8d] border-b-4 border-black px-4 py-2 text-xs font-black text-neutral-50 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+              <Link href="/dashboard" className="bg-[#913f8d] hover:bg-[#913f8d]/80 border-b-4 border-black px-4 py-2 text-xs font-black text-neutral-50 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
                 DASHBOARD
               </Link>
-              <button onClick={handleDisconnect} className="bg-[#2a2a32] border-b-4 border-black px-4 py-2 text-xs font-black text-neutral-400">
-                EXIT
+              <button onClick={handleDisconnect} className="bg-[#2a2a32] hover:bg-[#3a3a42]/80 border-b-4 cursor-pointer border-black px-4 py-2 text-xs font-black text-neutral-400">
+                DISCONNECT
               </button>
             </div>
           ) : (
             <button
               onClick={handleConnect}
-              className="bg-[#913f8d] border-b-4 border-black px-4 py-2 text-xs font-black text-neutral-50 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-y-1 active:shadow-none transition-all"
+              className="bg-[#913f8d] hover:bg-[#913f8d]/80 border-b-4 cursor-pointer border-black px-4 py-2 text-xs font-black text-neutral-50 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-y-1 active:shadow-none transition-all"
             >
               CONNECT WALLET
             </button>
