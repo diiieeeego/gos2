@@ -244,9 +244,9 @@ const Dashboard = () => {
           <Link href="/albumpage">
             <RetroButton>Open Your Album</RetroButton>
           </Link>
-          <Link href="/marketplace">
+          {/* <Link href="/marketplace">
             <RetroButton variant="secondary">Marketplace</RetroButton>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>

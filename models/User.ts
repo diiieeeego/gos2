@@ -23,9 +23,11 @@ export interface IUser {
 
   loginStreak: number;
   lastLoginAt?: Date;
+  lastRoll?: Date;
+
   
-  // DODANO: Role sustav (ako ćeš imati admin panel za dodavanje kartica)
   role: "player" | "admin";
+  
 }
 
 const UserSchema = new Schema<IUser>(
@@ -73,6 +75,10 @@ const UserSchema = new Schema<IUser>(
 
     loginStreak: { type: Number, default: 0 },
     lastLoginAt: { type: Date },
+    lastRoll: { 
+      type: Date, 
+      default: null 
+    },
     
     // DODANO: Default role
     role: { type: String, enum: ["player", "admin"], default: "player" }

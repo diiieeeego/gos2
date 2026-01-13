@@ -5,7 +5,6 @@ import {
   Dices,
   LayoutGrid,
   Coins,
-  ShieldCheck,
   Box,
   Store,
 } from "lucide-react";
