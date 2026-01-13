@@ -113,11 +113,15 @@ export default function Home() {
               of the Game of Sol album. These legendary creatures ensure that
               the memories of Solana are safeguarded.
             </p>
-            <p className="text-[#913f8d] font-bold text-lg uppercase italic">
+            <p className="text-[#913f8d] font-bold mb-6 text-lg uppercase italic">
               Every collector helps preserve the legacy. Help us ensure history
               is never forgotten.
             </p>
+            <div className="px-6 py-2 border-2 border-dashed border-[#913f8d] text-[#913f8d] font-black uppercase text-sm w-fit">
+                Coming Soon
+              </div>
           </div>
+          
         </div>
       </section>
 
@@ -167,23 +171,23 @@ export default function Home() {
             {/* Card 5: Mobile Game */}
             <ModuleCard
               icon={<Gamepad2 style={{ color: primaryPurple }} />}
-              href="#mobileApp"
+              href="/playtoearn"
               title="Play-to-Earn"
               desc="Engage in our mobile game to earn $GOS tokens while expanding your collection."
             />
 
-            {/* Card 7: Giving Back */}
+            {/* Card 7: Giving Back 
             <ModuleCard
               icon={<ShieldCheck style={{ color: primaryPurple }} />}
               href="#"
               title="Giving Back"
               desc="Allocated funds for community events, airdrops, and exclusive opportunities for loyal supporters."
             />
-
+                */}
             {/* Card 8: Marketplace */}
             <ModuleCard
               icon={<Store style={{ color: primaryPurple }} />}
-              href="#marketplace"
+              href="#"
               title="Marketplace"
               desc="A decentralized marketplace for trading and selling your digital collectibles."
             />
@@ -207,12 +211,12 @@ export default function Home() {
             awards!
           </p>
           <div className="flex justify-center gap-4">
-            <div className="w-35 h-12.5 flex items-center justify-center bg-white text-black font-black uppercase text-sm border-b-4 border-gray-400">
+            <Link href="/playtoearn" className="w-35 h-12.5 flex items-center justify-center bg-white text-black font-black uppercase text-sm border-b-4 border-gray-400">
               Roll Dice
-            </div>
-            <div className="w-35 h-12.5 flex items-center justify-center bg-[#913f8d] text-white font-black uppercase text-sm border-b-4 border-black">
+            </Link>
+            <Link href="/playtoearn#leaderboard" className="w-35 h-12.5 flex items-center justify-center bg-[#913f8d] text-white font-black uppercase text-sm border-b-4 border-black">
               Leaderboard
-            </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -264,18 +268,23 @@ function ModuleCard({
   desc: string;
 }) {
   return (
-    <div className="bg-[#121217] border-t-4 border-l-4 border-r-8 border-b-8 border-black p-8 hover:border-[#913f8d] transition-all group">
+    <Link href={href} className="bg-[#121217] border-t-4 border-l-4 border-r-8 border-b-8 border-black p-8 hover:border-[#913f8d] transition-all group">
       <div className="mb-6 w-fit transform group-hover:scale-130 transition-transform origin-left">
       {icon}
       </div>
       <h4 className="text-xl font-black uppercase italic mb-3 tracking-tighter">
         {title}
       </h4>
-      <p className="text-gray-500 text-xs leading-relaxed uppercase font-bold">
+      <p className="text-gray-500 text-xs leading-relaxed mb-3 uppercase font-bold">
         {desc}
       </p>
+      {href === "#" ? (
+        <div className="mt-6 px-4 py-2 border-2 border-dashed border-[#913f8d] text-[#913f8d] font-black uppercase text-sm w-fit">
+          Coming Soon
+        </div>
+      ) : <div className="bg-[#913f8d] mt-6 w-fit cursor-pointer border-b-4 border-black px-6 py-2 text-xs uppercase font-black active:border-b-0 active:translate-y-1 text-neutral-50 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-[#913f8d]/80 transition">Go</div>  }
       
-      <Link className="mt-4 w-24 h-8 flex items-center justify-center bg-[#913f8d] text-white font-black uppercase text-sm border-b-4 border-black" href={href}>Go</Link>
-    </div>
+      
+    </Link>
   );
 }

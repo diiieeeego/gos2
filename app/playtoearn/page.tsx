@@ -151,7 +151,7 @@ const PlayToEarn = () => {
         </div>
 
         {/* Leaderboard Section */}
-        <div className="border-4 border-primary-purple p-4 bg-zinc-900/50 mb-8">
+        <div id="leaderboard" className="border-4 border-primary-purple p-4 bg-zinc-900/50 mb-8">
           <h2 className="text-primary-purple mb-4 text-sm font-bold text-center italic">
             🏆 TOP PLAYERS 🏆
           </h2>

@@ -2,6 +2,7 @@
 
 import React, { useState, useMemo } from "react";
 import { Search, ShoppingCart } from "lucide-react";
+import { useWallet } from "@solana/wallet-adapter-react";
 import Image from "next/image";
 
 // Definiramo tipove za naše kartice
@@ -64,6 +65,7 @@ export default function Marketplace() {
   const primaryPurple = "#913f8d";
   const [searchTerm, setSearchTerm] = useState("");
   const [activeFilter, setActiveFilter] = useState<Rarity | "ALL">("ALL");
+  const { connected } = useWallet();
 
   // Logika filtriranja
   const filteredItems = useMemo(() => {
@@ -76,6 +78,17 @@ export default function Marketplace() {
       return matchesSearch && matchesFilter;
     });
   }, [searchTerm, activeFilter]);
+
+
+  if (!connected) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-black font-mono p-4">
+        <div className="border-4 border-red-500 p-8 text-red-500 animate-pulse text-center">
+          [ ACCESS DENIED: PLEASE CONNECT WALLET ]
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-[#0a0a0c] text-white font-mono selection:bg-[#913f8d] p-4 md:p-8">
