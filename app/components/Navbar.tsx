@@ -9,11 +9,46 @@ export default function Navbar() {
   const { publicKey, connected, disconnect, connecting } = useWallet();
   const { setVisible } = useWalletModal();
   
-  // Lokalni override za 'connecting' jer adapter zna zaglaviti
   const [isManualLoading, setIsManualLoading] = useState(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Prati promjene stanja i čisti timeout
+  // --- LOGIKA ZA SINKRONIZACIJU S BAZOM ---
+  useEffect(() => {
+    const handleUserSync = async () => {
+      if (connected && publicKey) {
+        const walletAddr = publicKey.toBase58();
+        
+        try {
+          // 1. Pokušaj prvo dohvatiti korisnika (GET /api/user)
+          const checkRes = await fetch(`/api/user?publicKey=${walletAddr}`);
+          
+          if (checkRes.status === 404) {
+            // 2. Ako korisnik ne postoji, kreiraj ga (POST /api/user/connect)
+            console.log("Korisnik nije pronađen, kreiram novi profil...");
+            await fetch("/api/user/connect", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ walletAddress: walletAddr }),
+            });
+          } else {
+            // 3. Ako korisnik postoji, samo okini connect rutu da dobije XP bonus
+            // jer tvoj POST /api/user/connect rješava i daily login bonus!
+            await fetch("/api/user/connect", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ walletAddress: walletAddr }),
+            });
+          }
+        } catch (err) {
+          console.error("Greška pri sinkronizaciji korisnika:", err);
+        }
+      }
+    };
+
+    handleUserSync();
+  }, [connected, publicKey]);
+
+  // Čišćenje loading stanja
   useEffect(() => {
     if (connected || !connecting) {
       setIsManualLoading(false);
@@ -24,8 +59,6 @@ export default function Navbar() {
   const handleConnect = () => {
     setIsManualLoading(true);
     setVisible(true);
-
-    // Ako se ništa ne dogodi nakon 8 sekundi, resetiraj gumb
     timeoutRef.current = setTimeout(() => {
       setIsManualLoading(false);
     }, 8000);
@@ -35,11 +68,10 @@ export default function Navbar() {
     try {
       await disconnect();
     } finally {
-      window.location.reload(); // Najsigurniji način za čišćenje portova
+      window.location.reload(); 
     }
   };
 
-  // UI odlučuje što prikazati
   const isLoading = (connecting || isManualLoading) && !connected;
 
   return (
