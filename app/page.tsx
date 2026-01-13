@@ -116,9 +116,13 @@ export default function Home() {
               Every collector helps preserve the legacy. Help us ensure history
               is never forgotten.
             </p>
-            <div className="px-6 py-2 border-2 border-dashed border-[#913f8d] text-[#913f8d] font-black uppercase text-sm w-fit">
+            <div className="px-6 py-2 border-2 border-dashed border-[#913f8d] text-[#913f8d] font-black uppercase text-sm w-fit mb-6 ">
                 Coming Soon
               </div>
+              <Link href="/albumpage" className="bg-[#913f8d] w-fit cursor-pointer border-b-4 border-black px-6 py-2 text-xs uppercase font-black active:border-b-0 active:translate-y-1 text-neutral-50 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-[#913f8d]/80 transition">
+               View Showcase
+              </Link>
+              
           </div>
           
         </div>

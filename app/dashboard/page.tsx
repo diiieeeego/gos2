@@ -241,9 +241,12 @@ const Dashboard = () => {
         </section>
 
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <Link href="/albumpage">
+          {/* <Link href="/albumpage">
             <RetroButton>Open Your Album</RetroButton>
-          </Link>
+          </Link> */}
+          <div className="px-6 py-4 border-2 border-dashed border-[#913f8d] text-[#913f8d] font-black uppercase text-sm text-center">
+                Album Coming Soon
+              </div>
           <Link href="/playtoearn">
             <RetroButton variant="secondary">Play to Earn</RetroButton>
           </Link>
@@ -346,7 +349,7 @@ const RetroButton = ({
 
   return (
     <button
-      className={`${styles} w-full py-4 px-6 transition-all active:translate-y-1 active:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] border-2 border-white/10 text-[10px] font-bold cursor-pointer uppercase tracking-widest`}
+      className={`${styles} w-full py-4 px-6 transition-all active:translate-y-1 active:shadow-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] border-2 border-white/10 text-sm font-bold cursor-pointer uppercase tracking-widest`}
     >
       {children}
     </button>

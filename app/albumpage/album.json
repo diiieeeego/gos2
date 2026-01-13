@@ -1,0 +1,293 @@
+[
+  {
+    "id": 1,
+    "title": "Table of Contents",
+    "description": "",
+    "content": "",
+    "items": [
+      { "name": "GameOfSol & Solana", "page": 1, "pagesm": 2, "nfts":[] },
+      { "name": "Memorable Events", "page": 3, "pagesm": 3, "nfts":[] },
+      { "name": "Best Of Solana", "page": 3, "pagesm": 4, "nfts":[] },
+      { "name": "SolCasino", "page": 5, "pagesm":5 },
+      { "name": "Cets", "page": 5, "pagesm": 6, "nfts":[] },
+      { "name": "Honeyland", "page": 7, "pagesm": 7 },
+      { "name": "Frogana", "page": 7, "pagesm": 8 },
+      { "name": "Owls", "page": 9, "pagesm":9 },
+      { "name": "Portals", "page": 9, "pagesm":10 },
+      { "name": "Sharky", "page": 11, "pagesm":11 },
+      { "name": "Galactic Geckos", "page": 11, "pagesm":12 },
+      { "name": "DeGods", "page": 13, "pagesm":13 },
+      { "name": "ClaynoSaurz", "page": 13, "pagesm":14 },
+      { "name": "Bored Ape Solana Club", "page": 15, "pagesm":15 },
+      { "name": "y00ts", "page": 15, "pagesm":16 },
+      { "name": "Rugs", "page": 17, "pagesm":17 } 
+    ],
+    "cards": []
+  },
+  {
+    "id": 2,
+    "title": "GameOfSol & Solana",
+    "description": "Perfect harmony between technology and story telling",
+    "content": "Dear Collectors, Welcome to the Game of Sol Album, a unique collection that preserves the memories of the Solana ecosystem! ",
+    "cards": [
+      {
+        "idc": 19,
+        "name": "Solana",
+        "img": "./solanaCard.webp"
+      },
+      {
+        "idc": 20,
+        "name": "gos",
+        "img": "./gosCard.webp"
+      }
+    ],
+    "items": []
+  },
+  {
+    "id": 3,
+    "title": "Memorable Events",
+    "description": "Celebrating the biggest and most unforgettable events in Solana’s history.",
+    "content": "",
+    "cards": [],
+    "items": []
+  },
+  {
+    "id": 4,
+    "title": "Best Of Solana",
+    "description": "The best projects, innovations, and success stories that define Solana’s strength.",
+    "content": "",
+    "cards": [
+      {
+        "idc": 8974,
+        "name": "solflare",
+        "img": "./solflareCard.webp"
+      },
+      {
+        "idc": 4321,
+        "name": "solflare2",
+        "img": "./solflareCard2.webp"
+      },
+      {
+        "idc": 4212,
+        "name": "helio",
+        "img": "./helioCard.webp"
+      },
+      {
+        "idc": 17236,
+        "name": "SandWatch",
+        "img": "./sandCard.webp"
+      },
+      {
+        "idc": 3930,
+        "name": "SuperTeam",
+        "img": "./supertCard.webp"
+      },
+      {
+        "idc": 4092,
+        "name": "SolanaGaming",
+        "img": "./gamingCard.webp"
+      }
+    ],
+    "items": []
+    
+  },
+  {
+    "id": 5,
+    "title": "SolCasino",
+    "description": "Solana’s top  casino is now a part of history.",
+    "content": "",
+    "cards": [
+      {
+        "idc": 3376,
+        "name": "SolCasino",
+        "img": "./solcasinoCard.webp"
+      }
+    ],
+    "items": []
+  },  
+  {
+    "id": 6,
+    "title": "Cets",
+    "description": "From the streets of Solana straight into the Game of Sol album.",
+    "content": "",
+    "cards": [
+      {
+        "idc": 25,
+        "name": "Cets",
+        "img": "./cetsCard.webp"
+      }
+    ],
+    "items": []
+  }
+  ,
+  {
+    "id": 7,
+    "title": "Honeyland",
+    "description": "From the buzzing hives to the Game of Sol album—Honeyland has arrived! ",
+    "content": "",
+    "cards": [
+      {
+        "idc": 257,
+        "name": "Honeyland",
+        "img": "./honeylandCard.webp"
+      }
+    ],
+    "items": []
+  }
+  ,
+  {
+    "id": 8,
+    "title": "Frogana",
+    "description": "Born from the tides, forged in the Game of Sol, Frogana has arrived!",
+    "content": "",
+    "cards": [
+      {
+        "idc":957,
+        "name": "Frogana",
+        "img": "./froganaCard.webp"
+      }
+    ],
+    "items": []
+  },
+  {
+    "id": 9,
+    "title": "Owls",
+    "description": "Born from the shadows, guided by wisdom, Owls Labs has emerged.",
+    "content": "",
+    "cards": [
+      {
+        "idc":597,
+        "name": "Owls",
+        "img": "./owlsCard.webp"
+      }
+    ],
+    "items": []
+  },
+  {
+    "id": 10,
+    "title": "Portals",
+    "description": "From realms unknown to the heart of Solana.",
+    "content": "",
+    "cards": [
+      {
+        "idc": 33,
+        "name": "Portals",
+        "img": "./portalsCard.webp"
+      }
+    ],
+    "items": []
+  },
+  {
+    "id": 11,
+    "title": "Sharky",
+    "description": "From the depths of DeFi straight into the Game of Sol Album!",
+    "content": "",
+    "cards": [
+      {
+        "idc": 3387,
+        "name": "Sharky",
+        "img": "./sharkyCard.webp"
+      }
+    ],
+    "items": []
+  },
+  {
+    "id": 11,
+    "title": "Galactic Geckos",
+    "description": "From the cosmic frontlines, straight into the Game of Sol album.",
+    "content": "",
+    "cards": [
+      {
+        "idc": 3328,
+        "name": "Galactic Geckos",
+        "img": "./geckosCard.webp"
+      }
+    ],
+    "items": []
+  },
+  {
+    "id": 12,
+    "title": "DeGods",
+    "description": "From the Mount Olympus of Solana, straight into the Game of Sol album.",
+    "content": "",
+    "cards": [
+      {
+        "idc": 6533,
+        "name": "Degods",
+        "img": "./degodsCard.webp"
+      }
+    ],
+    "items": []
+  },
+  {
+    "id": 13,
+    "title": "ClaynoSaurz",
+    "description": "Straight from the clay, Claynosaurz bring the sound that'll blow you away.",
+    "content": "",
+    "cards": [
+      {
+        "idc": 5433,
+        "name": "ClaynoSaurz",
+        "img": "./claynoCard.webp"
+      }
+    ],
+    "items": []
+  },
+  {
+    "id": 14,
+    "title": "Bored Ape SC",
+    "description": "In Solana’s groove, where apes unite, our album drops—pure sonic delight!",
+    "content": "",
+    "cards": [
+      {
+        "idc": 9033,
+        "name": "Bored Ape Solana Club",
+        "img": "./boredapeCard.webp"
+      }
+    ],
+    "items": []
+  },
+  {
+    "id": 15,
+    "title": "y00ts",
+    "description": "In Solana’s groove, where apes unite, our album drops—pure sonic delight!",
+    "content": "",
+    "cards": [
+      {
+        "idc": 24384,
+        "name": "y00ts",
+        "img": "./y00tsCard.webp"
+      }
+    ],
+    "items": []
+  },
+  {
+    "id": 15,
+    "title": "Rugs",
+    "description": "A reminder of the lessons learned from failed and fraudulent projects.",
+    "content": "",
+    "cards": [
+      {
+        "idc": 33,
+        "name": "Balloonsville",
+        "img": "./balloonsvilleCard.webp"
+      },
+      {
+        "idc": 334,
+        "name": "ABC",
+        "img": "./abcCard.webp"
+      },
+      {
+        "idc": 3532,
+        "name": "OG Atadians",
+        "img": "./ogatadiansCard.webp"
+      },
+      {
+        "idc": 3623,
+        "name": "YugiBao",
+        "img": "./yugibaoCard.webp"
+      }
+    ],
+    "items": []
+  }
+]
