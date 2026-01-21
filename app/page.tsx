@@ -62,7 +62,7 @@ export default function Home() {
           </h2>
           <div className="bg-[#913f8d]/10 border-2 border-[#913f8d] p-6 mb-10 text-left relative">
             <div className="absolute -top-3 -left-3 bg-[#913f8d] text-white px-2 py-1 text-[10px] font-bold">
-              STORY_LOG.EXE
+              STORY
             </div>
             <p className="text-sm md:text-base text-gray-300 leading-relaxed uppercase tracking-tight">
               We believe in the power of memories. The Solana community has
@@ -90,14 +90,14 @@ export default function Home() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
           <div className="order-2 md:order-1 relative">
             <div className="aspect-square border-8 border-[#1a1a24] bg-[#0a0a0c] flex items-center justify-center p-12 group transition-all hover:border-[#913f8d]">
-              <div className="text-8xl md:text-[12rem] animate-bounce filter drop-shadow-[0_0_20px_#913f8d]">
+              <Link href="/albumpage" className="text-8xl md:text-[12rem] animate-bounce filter drop-shadow-[0_0_20px_#913f8d]">
                 <Image
                   alt="Album Icon"
                   src="/album.png"
                   width={150}
                   height={150}
                 />
-              </div>
+              </Link>
               {/* 8-bit corners */}
               <div className="absolute top-0 left-0 w-6 h-6 border-t-4 border-l-4 border-[#913f8d]"></div>
               <div className="absolute bottom-0 right-0 w-6 h-6 border-b-4 border-r-4 border-[#913f8d]"></div>

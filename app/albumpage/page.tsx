@@ -35,7 +35,7 @@ const AlbumPage = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [selectedCard, setSelectedCard] = useState<AlbumCard | null>(null);
   const [isInTransition, setIsInTransition] = useState(false);
-  const { connected } = useWallet();
+  /* const { connected } = useWallet(); */
 
   // Sigurno kastanje i filtriranje podataka
   const rawData = albumDataRaw as unknown as AlbumSection[];
@@ -67,7 +67,7 @@ const AlbumPage = () => {
     if (currentPage > 0) setCurrentPage((p) => p - 1);
   };
 
-  if (!connected) {
+  /* if (!connected) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-black font-mono p-4">
         <div className="border-4 border-red-500 p-8 text-red-500 animate-pulse text-center uppercase">
@@ -75,7 +75,7 @@ const AlbumPage = () => {
         </div>
       </div>
     );
-  }
+  } */
 
   const defaultCard: AlbumCard = {
     idc: 0,
