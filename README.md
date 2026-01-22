@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Game of Sol
 
-## Getting Started
+Ovo je Next.js projekt koji služi kao web platforma za www.gameofsol.com. Projekt je fokusiran na integraciju Solana ekosustava i modernih web funkcionalnosti.
+Getting Started
 
-First, run the development server:
+Prvo, pokrenite razvojni server:
+Bash
 
-```bash
 npm run dev
-# or
+# ili
 yarn dev
-# or
+# ili
 pnpm dev
-# or
+# ili
 bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Otvorite http://localhost:3000 u vašem pregledniku kako biste vidjeli rezultat.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Glavne izmjene na sučelju i funkcionalnostima možete vršiti modificiranjem datoteke app/page.tsx. Stranica se automatski osvježava prilikom spremanja promjena.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Ovaj projekt koristi next/font za automatsku optimizaciju i učitavanje Geist font obitelji.
+Learn More
 
-## Learn More
+Za više informacija o tehnologijama korištenim na Game of Sol, pogledajte sljedeće resurse:
 
-To learn more about Next.js, take a look at the following resources:
+    Next.js Documentation - informacije o Next.js značajkama i API-ju.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    Solana Documentation - detalji o integraciji sa Solana blockchainom.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    Tailwind CSS - dokumentacija za stiliziranje sučelja.
 
-## Deploy on Vercel
+Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Game of Sol je optimiziran za deployment na Vercel Platform od strane kreatora Next.js-a.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Za detalje o produkcijskom postavljanju, pogledajte Next.js deployment dokumentaciju.
