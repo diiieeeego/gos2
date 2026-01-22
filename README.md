@@ -1,36 +1,36 @@
 Game of Sol
 
-Ovo je Next.js projekt koji služi kao web platforma za www.gameofsol.com. Projekt je fokusiran na integraciju Solana ekosustava i modernih web funkcionalnosti.
+This is a Next.js project that serves as the web platform for www.gameofsol.com. The project is focused on the integration of the Solana ecosystem and modern web functionalities.
 Getting Started
 
-Prvo, pokrenite razvojni server:
+First, run the development server:
 Bash
 
 npm run dev
-# ili
+# or
 yarn dev
-# ili
+# or
 pnpm dev
-# ili
+# or
 bun dev
 
-Otvorite http://localhost:3000 u vašem pregledniku kako biste vidjeli rezultat.
+Open http://localhost:3000 with your browser to see the result.
 
-Glavne izmjene na sučelju i funkcionalnostima možete vršiti modificiranjem datoteke app/page.tsx. Stranica se automatski osvježava prilikom spremanja promjena.
+You can start editing the page by modifying app/page.tsx. The page auto-updates as you edit the file.
 
-Ovaj projekt koristi next/font za automatsku optimizaciju i učitavanje Geist font obitelji.
+This project uses next/font to automatically optimize and load Geist, a new font family for Vercel.
 Learn More
 
-Za više informacija o tehnologijama korištenim na Game of Sol, pogledajte sljedeće resurse:
+To learn more about the technologies used on Game of Sol, take a look at the following resources:
 
-    Next.js Documentation - informacije o Next.js značajkama i API-ju.
+    Next.js Documentation - learn about Next.js features and API.
 
-    Solana Documentation - detalji o integraciji sa Solana blockchainom.
+    Solana Documentation - details regarding integration with the Solana blockchain.
 
-    Tailwind CSS - dokumentacija za stiliziranje sučelja.
+    Tailwind CSS Documentation - documentation for interface styling.
 
 Deploy on Vercel
 
-Game of Sol je optimiziran za deployment na Vercel Platform od strane kreatora Next.js-a.
+Game of Sol is optimized for deployment on the Vercel Platform from the creators of Next.js.
 
-Za detalje o produkcijskom postavljanju, pogledajte Next.js deployment dokumentaciju.
+Check out the Next.js deployment documentation for more details.
